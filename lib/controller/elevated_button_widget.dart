@@ -10,11 +10,7 @@ class ElevatedButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      /// when you pass false to the listen parameter
-      /// like Provider.of<T>(context,listen: false) it will behave similar to read
-
       onPressed: () =>
-          // context.read<QuestionAndAnswerModel>().incrementCounter(),
           Provider.of<QuestionAndAnswerModel>(context, listen: false)
               .incrementCounter(),
       child: Text(

@@ -5,8 +5,8 @@ import 'package:quiz_app3/controller/elevated_button_widget.dart';
 import 'package:quiz_app3/controller/question_widget.dart';
 import 'package:quiz_app3/model/question_and_answer_model.dart';
 
-class NewQuizAppHome extends StatelessWidget {
-  const NewQuizAppHome({super.key});
+class QuizAppHome extends StatelessWidget {
+  const QuizAppHome({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,11 +30,8 @@ class NewQuizAppHome extends StatelessWidget {
               ),
               const SizedBox(height: 20.0),
               QuestionWidget(
-                /// static method Provider.of<T>(context), which will behave similarly to watch
-                ///
                 questions:
                     Provider.of<QuestionAndAnswerModel>(context).questions,
-                // questions: context.watch<QuestionAndAnswerModel>().questions,
                 counter: context.watch<QuestionAndAnswerModel>().counter,
               ),
               ...(context.watch<QuestionAndAnswerModel>().questions[context
